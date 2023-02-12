@@ -17,8 +17,9 @@ public class InitWebDriver {
         }
         return driver;
     }
-    public static void stopWebDriver(){
+
+    public static void stopWebDriver() {
         driver.quit();
-        driver=null;
+        driver = null;
     }
 }

@@ -3,29 +3,29 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 public class PastebinHomePage extends AbstractPage {
     private static final String HOMEPAGE_URL = "https://pastebin.com/";
+    public WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
     @FindBy(xpath = "//*[@id='postform-text']")
     private WebElement fieldForCode;
-    @FindBy(xpath = "//span[@aria-labelledby='select2-postform-expiration-container']/span[@role='presentation']")
+    @FindBy(xpath = "//span[@id='select2-postform-expiration-container']")
     private WebElement pasteExpirationContainer;
-    @FindBy(xpath = "//*[@id='postform-expiration']")
+    @FindBy(xpath = "//ul[@role='listbox']/li[3]")
     private WebElement selectedTenMinInterval;
     @FindBy(xpath = "//input[@id='postform-name']")
     private WebElement fieldForTitle;
+    @FindBy(xpath = "//button[@class='search_btn']")
+    private WebElement createButton;
 
     public PastebinHomePage(WebDriver driver) {
         super(driver);
-        PageFactory.initElements(driver, this);
+
     }
 
     public PastebinHomePage openPage() {
@@ -34,28 +34,23 @@ public class PastebinHomePage extends AbstractPage {
         return this;
     }
 
-    private void pasteCode(String code) {
-        fieldForCode.sendKeys(code);
+    public WebElement getFieldForCode() {
+        return webDriverWait.until(ExpectedConditions.visibilityOf(fieldForCode));
     }
 
-    private void pasteTitle(String title) {
-        fieldForTitle.sendKeys(title);
+    public WebElement getPasteExpirationContainer() {
+        return pasteExpirationContainer;
     }
 
-    public PastebinHomePage creatingNewPasteWithParamFromTask(String code, String title) {
-        pasteCode(code);
-        pasteTitle(title);
-        pasteExpirationContainer.click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WAIT_TIMEOUT_SEC));
+    public WebElement getSelectedTenMinInterval() {
+        return selectedTenMinInterval;
+    }
 
-        Select select=new Select(selectedTenMinInterval);
-        select.selectByVisibleText("10 Minutes");
-        pasteExpirationContainer.click();
+    public WebElement getFieldForTitle() {
+        return webDriverWait.until(ExpectedConditions.visibilityOf(fieldForTitle));
+    }
 
-
-
-
-        return this;
-
+    public WebElement getCreateButton() {
+        return createButton;
     }
 }
