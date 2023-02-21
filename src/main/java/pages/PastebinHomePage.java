@@ -3,15 +3,13 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
+import static Constants.Constants.CODE_TASK_ONE;
+import static Constants.Constants.TITLE_TASK_ONE;
+
 public class PastebinHomePage extends AbstractPage {
-    private static final String HOMEPAGE_URL = "https://pastebin.com/";
-    public WebDriverWait webDriverWait;
 
     @FindBy(xpath = "//*[@id='postform-text']")
     private WebElement fieldForCode;
@@ -31,46 +29,30 @@ public class PastebinHomePage extends AbstractPage {
 
     public PastebinHomePage(WebDriver driver) {
         super(driver);
-        PageFactory.initElements(driver, this);
+        driver.get("https://pastebin.com/");
+    }
+
+
+    public void insertCodeInFieldForCode(String code) {
+        fieldForCode.sendKeys(code);
+    }
+    public void insertTitleinFielfForTitle(String title){
+        fieldForTitle.sendKeys(title);
+    }
+    public void selectTenMinInterval(){
+        pasteExpirationContainer.click();
+        selectedTenMinInterval.click();
+    }
+    public CreatedPage createPageTaskOne(){
+        insertTitleinFielfForTitle(TITLE_TASK_ONE);
+        insertCodeInFieldForCode(CODE_TASK_ONE);
+        selectTenMinInterval();
+        createButton.submit();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        return new CreatedPage(driver);
 
     }
 
-    public void openPage() {
-        driver.get(HOMEPAGE_URL);
-    }
 
-    public WebElement getFieldForCode() {
-        webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(6));
-        return webDriverWait.until(ExpectedConditions.visibilityOf(fieldForCode));
-    }
-
-    public WebElement getPasteExpirationContainer() {
-        return pasteExpirationContainer;
-    }
-
-    public WebElement getSelectedTenMinInterval() {
-        return selectedTenMinInterval;
-    }
-
-    public WebElement getFieldForTitle() {
-        return webDriverWait.
-                until(ExpectedConditions.visibilityOf(fieldForTitle));
-    }
-
-    public WebElement getCreateButton() {
-        return createButton;
-    }
-
-    public WebElement getPasteHighlightingContainer() {
-        return pasteHighlightingContainer;
-    }
-
-    public WebElement getSelectedBash() {
-        return selectedBash;
-    }
-
-    public WebElement waitUntilElementVisible(WebElement webElement) {
-        webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(15));
-        return webDriverWait.until(ExpectedConditions.visibilityOf(webElement));
-    }
 }
+

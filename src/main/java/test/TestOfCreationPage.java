@@ -2,12 +2,16 @@ package test;
 
 import driver.InitWebDriver;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import steps.Steps;
+import pages.CreatedPage;
+import pages.PastebinHomePage;
 
-public class TestingOfOurPateBin {
+
+
+public class TestOfCreationPage {
     private WebDriver driver;
 
     @BeforeTest
@@ -18,8 +22,9 @@ public class TestingOfOurPateBin {
 
     @Test
     public void testMethod() throws IllegalArgumentException {
-        Steps steps = new Steps(driver);
-        steps.creatingNewPasteWithParamFromTask(steps.code1, steps.title1);
+        PastebinHomePage pastebinHomePage=new PastebinHomePage(driver);
+        CreatedPage createdPage=pastebinHomePage.createPageTaskOne();
+        Assert.assertEquals("helloweb", createdPage.getTitleIndicatorForCheck());
     }
 
 
