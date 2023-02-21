@@ -1,29 +1,56 @@
 package steps;
 
 import org.openqa.selenium.WebDriver;
+import pages.CreatedPaste;
 import pages.PastebinHomePage;
 
 import java.time.Duration;
 
 public class Steps {
+    public String title1="helloweb";
+    public String code1="Hello from WebDriver";
     private WebDriver driver;
+    public String code2="git config --global user.name  'New Sheriff in Town'\n" +
+            "git reset $(git commit-tree HEAD^{tree} -m 'Legacy code')\n" +
+            "git push origin master --force";
+    public String title2="how to gain dominance among developers";
+    public String highlighting="Bash";
+    CreatedPaste paste;
 
     public Steps(WebDriver driver) {
         this.driver = driver;
     }
-    public PastebinHomePage creatingNewPasteWithParamFromTask(String code, String title) {
-        PastebinHomePage home=new PastebinHomePage(driver);
+
+    public CreatedPaste creatingNewPasteWithParamFromTask(String code, String title) {
+        this.code1=code;
+        this.title1=title;
+        PastebinHomePage home = new PastebinHomePage(driver);
         home.openPage();
         home.getPasteExpirationContainer().click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(home.WAIT_TIMEOUT_SEC));
-        home.getSelectedTenMinInterval().click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
-        home.getFieldForTitle().sendKeys(title);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        home.waitUntilElementVisible(home.getSelectedTenMinInterval()).click();
         home.getFieldForCode().sendKeys(code);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         home.getCreateButton().submit();
-        return home;
+
+
+        return paste;
+
+    }
+
+    public CreatedPaste creatingPasteWithParamOfSecondTask(String code, String title) {
+        this.code2 = code;
+        this.title2 = title;
+        PastebinHomePage homePage = new PastebinHomePage(driver);
+        homePage.openPage();
+        homePage.getFieldForCode().sendKeys(code);
+        homePage.getFieldForTitle().sendKeys(title);
+        homePage.getPasteExpirationContainer().click();
+        homePage.getSelectedTenMinInterval().click();
+        homePage.waitUntilElementVisible(homePage.getPasteHighlightingContainer()).click();
+        homePage.waitUntilElementVisible(homePage.getSelectedBash()).click();
+        homePage.getCreateButton().submit();
+        paste=new CreatedPaste(driver);
+        return paste;
+
 
     }
 }
