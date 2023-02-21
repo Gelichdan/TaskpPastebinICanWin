@@ -1,4 +1,4 @@
-package Constants;
+package constants;
 
 public class Constants {
     public static String TITLE_TASK_ONE="helloweb";

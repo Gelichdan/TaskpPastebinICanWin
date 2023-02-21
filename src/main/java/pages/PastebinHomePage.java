@@ -6,8 +6,8 @@ import org.openqa.selenium.support.FindBy;
 
 import java.time.Duration;
 
-import static Constants.Constants.CODE_TASK_ONE;
-import static Constants.Constants.TITLE_TASK_ONE;
+import static constants.Constants.CODE_TASK_ONE;
+import static constants.Constants.TITLE_TASK_ONE;
 
 public class PastebinHomePage extends AbstractPage {
 
