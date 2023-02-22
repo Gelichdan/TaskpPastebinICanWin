@@ -11,7 +11,7 @@ import pages.PastebinHomePage;
 
 
 
-public class TestOfCreationPage {
+public class TestOfCreationPageTaskOne {
     private WebDriver driver;
 
     @BeforeTest
@@ -21,7 +21,7 @@ public class TestOfCreationPage {
     }
 
     @Test
-    public void testMethod() throws IllegalArgumentException {
+    public void testMethod() throws IllegalArgumentException, InterruptedException {
         PastebinHomePage pastebinHomePage=new PastebinHomePage(driver);
         CreatedPage createdPage=pastebinHomePage.createPageTaskOne();
         Assert.assertEquals("helloweb", createdPage.getTitleIndicatorForCheck());
