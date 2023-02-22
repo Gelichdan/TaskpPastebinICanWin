@@ -3,16 +3,14 @@ package test;
 import driver.InitWebDriver;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.CreatedPage;
 import pages.PastebinHomePage;
 
 public class TestOfParamMatchesTaskTwo {
     private WebDriver driver;
 
-    @BeforeTest
+    @BeforeSuite
     public void initDriver() {
         driver = InitWebDriver.setWebDriver();
     }
@@ -30,7 +28,7 @@ public class TestOfParamMatchesTaskTwo {
         CreatedPage createdPage = pastebinHomePage.createPageTaskTwo();
         Assert.assertEquals("git config --global user.name  'New Sheriff in Town'\n" +
                 "git reset $(git commit-tree HEAD^{tree} -m 'Legacy code')\n" +
-                " git push origin master --force", createdPage.getTextAreaForCheck());
+                "git push origin master --force", createdPage.getTextAreaForCheck());
     }
 
     @Test
@@ -41,7 +39,7 @@ public class TestOfParamMatchesTaskTwo {
     }
 
 
-    @AfterTest
+    @AfterSuite
     public void closeDriver() {
         InitWebDriver.stopWebDriver();
     }
