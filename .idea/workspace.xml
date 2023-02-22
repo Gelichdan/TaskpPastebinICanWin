@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="90416eda-fd91-4e71-929f-d9d44b51edee" name="Changes" comment="commit tests Fail in task two!">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2LYSc1gyJwTisrz2DuUhcMR5Hha" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/epamdata/TaskpPastebinICanWin&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\epamdata\TaskpPastebinICanWin\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\epamdata\TaskpPastebinICanWin\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.TestOfParamMatchesTaskTwo">
+    <configuration name="TestOfCreationPageTaskOne" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TaskpPastebinICanWin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.TestOfCreationPageTaskOne" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestOfParamMatchesTaskTwo" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TaskpPastebinICanWin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.TestOfParamMatchesTaskTwo" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestOfParamMatchesTaskTwo.testMethodForCodeMatch" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TaskpPastebinICanWin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.TestOfParamMatchesTaskTwo" />
+      <option name="METHOD_NAME" value="testMethodForCodeMatch" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestOfParamMatchesTaskTwo.testMethodForHighlightingMatch" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TaskpPastebinICanWin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.TestOfParamMatchesTaskTwo" />
+      <option name="METHOD_NAME" value="testMethodForHighlightingMatch" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestOfParamMatchesTaskTwo.testMethodForTitleMatch" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TaskpPastebinICanWin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.TestOfParamMatchesTaskTwo" />
+      <option name="METHOD_NAME" value="testMethodForTitleMatch" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.TestOfParamMatchesTaskTwo.testMethodForTitleMatch" />
+        <item itemvalue="TestNG.TestOfParamMatchesTaskTwo.testMethodForHighlightingMatch" />
+        <item itemvalue="TestNG.TestOfParamMatchesTaskTwo.testMethodForCodeMatch" />
+        <item itemvalue="TestNG.TestOfParamMatchesTaskTwo" />
+        <item itemvalue="TestNG.TestOfCreationPageTaskOne" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="90416eda-fd91-4e71-929f-d9d44b51edee" name="Changes" comment="" />
+      <created>1676046605109</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676046605109</updated>
+    </task>
+    <task id="LOCAL-00001" summary="First commit">
+      <created>1676470849064</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676470849064</updated>
+    </task>
+    <task id="LOCAL-00002" summary="First commit">
+      <created>1676472096230</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676472096230</updated>
+    </task>
+    <task id="LOCAL-00003" summary="commit after second task">
+      <created>1676986531528</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1676986531528</updated>
+    </task>
+    <task id="LOCAL-00004" summary="commit after second task">
+      <created>1677003044434</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1677003044434</updated>
+    </task>
+    <task id="LOCAL-00005" summary="commit after second task!">
+      <created>1677003123944</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1677003123944</updated>
+    </task>
+    <task id="LOCAL-00006" summary="commit after second task!">
+      <created>1677004281431</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1677004281431</updated>
+    </task>
+    <task id="LOCAL-00007" summary="commit after second task!">
+      <created>1677058281736</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1677058281736</updated>
+    </task>
+    <task id="LOCAL-00008" summary="commit tests Fail in task two">
+      <created>1677058445874</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1677058445874</updated>
+    </task>
+    <task id="LOCAL-00009" summary="commit tests Fail in task two!">
+      <created>1677086913859</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1677086913859</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="rr" />
+    <MESSAGE value="First commit" />
+    <MESSAGE value="commit after second task" />
+    <MESSAGE value="commit after second task!" />
+    <MESSAGE value="commit tests Fail in task two" />
+    <MESSAGE value="commit tests Fail in task two!" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit tests Fail in task two!" />
+  </component>
+</project>
