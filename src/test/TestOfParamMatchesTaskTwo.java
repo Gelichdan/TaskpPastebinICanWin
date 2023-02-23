@@ -6,23 +6,24 @@ import org.testng.Assert;
 import org.testng.annotations.*;
 import pages.CreatedPage;
 import pages.PastebinHomePage;
+@Test
 
 public class TestOfParamMatchesTaskTwo {
     private WebDriver driver;
 
-    @BeforeSuite
+    @BeforeTest
     public void initDriver() {
         driver = InitWebDriver.setWebDriver();
     }
 
-    @Test
+
     public void testMethodForTitleMatch() throws InterruptedException {
         PastebinHomePage pastebinHomePage = new PastebinHomePage(driver);
         CreatedPage createdPage = pastebinHomePage.createPageTaskTwo();
         Assert.assertEquals("how to gain dominance among developers", createdPage.getTitleIndicatorForCheck());
     }
 
-    @Test
+
     public void testMethodForCodeMatch() throws InterruptedException {
         PastebinHomePage pastebinHomePage = new PastebinHomePage(driver);
         CreatedPage createdPage = pastebinHomePage.createPageTaskTwo();
@@ -31,7 +32,7 @@ public class TestOfParamMatchesTaskTwo {
                 "git push origin master --force", createdPage.getTextAreaForCheck());
     }
 
-    @Test
+
     public void testMethodForHighlightingMatch() throws InterruptedException {
         PastebinHomePage pastebinHomePage = new PastebinHomePage(driver);
         CreatedPage createdPage = pastebinHomePage.createPageTaskTwo();
@@ -39,7 +40,7 @@ public class TestOfParamMatchesTaskTwo {
     }
 
 
-    @AfterSuite
+    @AfterTest
     public void closeDriver() {
         InitWebDriver.stopWebDriver();
     }
