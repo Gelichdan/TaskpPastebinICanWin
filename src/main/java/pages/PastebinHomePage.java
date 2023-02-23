@@ -14,7 +14,7 @@ public class PastebinHomePage extends AbstractPage {
 
     @FindBy(xpath = "//*[@id='postform-text']")
     private WebElement fieldForCode;
-    @FindBy(xpath = "//span[@id='select2-postform-expiration-container']")
+    @FindBy(xpath = "//span[@id='select2-postform-expiration-container']//following-sibling::*")
     private WebElement pasteExpirationContainer;
     @FindBy(xpath = "//ul[@role='listbox']/li[3]")
     private WebElement selectedTenMinInterval;
@@ -23,7 +23,7 @@ public class PastebinHomePage extends AbstractPage {
     @FindBy(xpath = "//button[@class='btn -big']")
     private WebElement createButton;
 
-    @FindBy(xpath = "//span[@id='select2-postform-format-container']")
+    @FindBy(xpath = "//span[@id='select2-postform-format-container']//following-sibling::*")
     private WebElement pasteHighlightingContainer;
     @FindBy(xpath = "//ul[@class='select2-results__options select2-results__options--nested']/li[contains(text(), 'Bash')]")
     private WebElement selectedBash;
@@ -43,8 +43,9 @@ public class PastebinHomePage extends AbstractPage {
     }
 
     public void selectTenMinInterval() {
-        pasteExpirationContainer.click();
-        new WebDriverWait(driver, Duration.ofSeconds(5)).
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.
+                elementToBeClickable(pasteExpirationContainer)).click();
+        new WebDriverWait(driver, Duration.ofSeconds(15)).
                 until(ExpectedConditions.elementToBeClickable(selectedTenMinInterval)).click();
     }
 
@@ -59,10 +60,12 @@ public class PastebinHomePage extends AbstractPage {
     }
 
     public void selectBashInHighlighting() {
-        pasteHighlightingContainer.click();
-        new WebDriverWait(driver, Duration.ofSeconds(5)).
+        new WebDriverWait(driver, Duration.ofSeconds(10), Duration.ofSeconds(5)).
+                until(ExpectedConditions.elementToBeClickable(pasteHighlightingContainer)).click();
+        new WebDriverWait(driver, Duration.ofSeconds(15)).
                 until(ExpectedConditions.elementToBeClickable(selectedBash)).click();
     }
+
     public CreatedPage createPageTaskTwo() throws InterruptedException {
         insertTitleInFieldForTitle(TITLE_TASK_TWO);
         insertCodeInFieldForCode(CODE_TASK_TWO);
